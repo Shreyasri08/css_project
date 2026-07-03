@@ -264,6 +264,163 @@
         font-size: 2rem;
     }
 }
+/* --- Contact Form Section --- */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    margin: -3rem auto 6rem auto; /* Negative margin pulls it up slightly to overlap beautifully if needed, or set to 4rem if separated */
+    padding: 0 2rem;
+    max-width: 1100px;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-card {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-card textarea {
+    width: 100%;
+    min-height: 120px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 1.25rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #1e352f;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.contact-card textarea:focus {
+    border-color: #2b5144;
+}
+
+/* Pill Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background-color: #1b261e;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #2b3a30;
+}
+
+/* --- Main Footer --- */
+.main-footer {
+    background-color: #0f1d19; /* Deepest dark green tone */
+    color: rgba(255, 255, 255, 0.7);
+    padding: 5rem 4rem 2rem 4rem;
+    font-size: 0.95rem;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.footer-brand {
+    max-width: 360px;
+}
+
+.footer-brand .logo {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.brand-text {
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.footer-links-group {
+    display: flex;
+    gap: 6rem;
+}
+
+.footer-column h3 {
+    color: #ffffff;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-column a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+    max-width: 1100px;
+    margin: 4rem auto 0 auto;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.4;
+}
+
+.footer-bottom a {
+    color: inherit;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .footer-links-group {
+        gap: 3rem;
+        justify-content: space-between;
+    }
+    
+    .main-footer {
+        padding: 4rem 2rem 2rem 2rem;
+    }
+}
 /* --- Reset and Base Styles --- */
 * {
     margin: 0;
