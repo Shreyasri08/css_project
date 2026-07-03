@@ -1,3 +1,269 @@
+/* --- Hero Section Layout --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    text-align: left;
+    max-width: 1100px;
+    margin: 2rem auto 6rem auto; /* Large bottom margin to separate from the cards section */
+    padding: 0 2rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 540px;
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* --- Typography & Text Styling --- */
+.hero-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    opacity: 0.6;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #1b261e;
+    margin-bottom: 1.5rem;
+}
+
+/* Highlight underline styling for "breathes" */
+.highlight {
+    position: relative;
+    z-index: 1;
+}
+
+.highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 100%;
+    height: 12px;
+    background-color: #dfd5be; /* Soft tan highlight color */
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #3a4d40;
+    margin-bottom: 2.5rem;
+    max-width: 460px;
+}
+
+.hero-description strong {
+    font-weight: 600;
+}
+
+/* --- Buttons --- */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.85rem 1.75rem;
+    border-radius: 50px; /* Fully rounded capsule buttons */
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-solid {
+    background-color: #1b261e; /* Very dark forest green/black */
+    color: #ffffff;
+    border: 1px solid #1b261e;
+}
+
+.btn-solid:hover {
+    background-color: #2b3a30;
+    border-color: #2b3a30;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #1b261e;
+    border: 1px solid #1b261e;
+}
+
+.btn-outline:hover {
+    background-color: rgba(27, 38, 30, 0.05);
+}
+
+/* --- Illustration Placeholder --- */
+.graphic-box {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    background-color: #159a74; /* Vibrant teal/green background */
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.plant-illustration {
+    font-size: 8rem; /* Scaled emoji layout; replace with an <img> tag as needed */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column-reverse; /* Stacks image on top on mobile */
+        text-align: center;
+        margin-bottom: 4rem;
+        gap: 2.5rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .hero-image-container {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .hero-title {
+        font-size: 2.75rem;
+    }
+}
+/* --- Reference Section Wrapper --- */
+.reference-section {
+    background-color: #1e352f; /* Dark green background */
+    color: #ffffff; /* White text for contrast */
+    padding: 5rem 2rem;
+    margin-top: 6rem;
+    text-align: center;
+    border-radius: 24px; /* Optional: adds smooth edges to the container */
+}
+
+.ref-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    opacity: 0.5;
+    margin-bottom: 1rem;
+}
+
+.ref-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.ref-description {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+/* --- Table Styles --- */
+.table-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95); /* Light off-white table body background */
+    color: #1e352f; /* Dark text inside table */
+    border-radius: 12px;
+    overflow: hidden; /* Ensures corners match border-radius */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+/* Header Row Styling */
+.schedule-table th {
+    background-color: #2b5144; /* Medium green header block */
+    color: #ffffff;
+    font-weight: 500;
+    padding: 1.25rem 2rem;
+    font-size: 0.9rem;
+}
+
+/* Data Rows Styling */
+.schedule-table td {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.schedule-table tbody tr:last-of-type td {
+    border-bottom: none; /* Removes line on last plant item */
+}
+
+.schedule-table td strong {
+    font-weight: 600;
+}
+
+/* --- Table Footer Row Styling --- */
+.table-footer-row {
+    background-color: #f4f6f4; /* Subtle gray/green accent background for the footer row */
+}
+
+.table-footer-row td {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 2rem;
+}
+
+.footer-note {
+    font-weight: 600;
+    color: #1e352f;
+}
+
+.footer-percentage {
+    text-align: left;
+    font-weight: 700;
+    color: #2b5144;
+}
+
+/* --- Responsive Layout for Tables --- */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto; /* Adds a horizontal scrollbar if the viewport is too narrow */
+    }
+    
+    .schedule-table th, 
+    .schedule-table td {
+        padding: 1rem; /* Condenses spacing slightly on small viewports */
+    }
+    
+    .ref-title {
+        font-size: 2rem;
+    }
+}
 /* --- Reset and Base Styles --- */
 * {
     margin: 0;
