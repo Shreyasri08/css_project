@@ -1,0 +1,95 @@
+<html lang="en">
+    <head>
+        <style>
+            /* position */
+nav a {
+    display: inline-block;   /* now padding & margins work on links */
+    padding: 10px 15px;
+}
+
+/* A banner pinned to the top while scrolling */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: navy;
+    color: white;
+    z-index: 100;
+}
+
+/* A badge nudged onto the corner of a card */
+.card { position: relative; }   /* the anchor */
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: crimson;
+    color: white;
+}
+/* display */
+
+.menu {
+    display: flex;
+    justify-content: space-between; /* spread links across the bar */
+    align-items: center;            /* vertically centre them */
+    gap: 20px;
+    padding: 15px;
+    background: #222;
+}
+
+.menu a { color: white; text-decoration: none; }
+
+/* Three equal columns that wrap on small screens */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cards .card { flex: 1; } /* each takes an equal share */
+        </style>
+    </head>
+    <body>
+    <h1>Pseudo-class & Pseudo-element Example</h1>
+    <p>
+        Visit 
+        <a href="https://example.com" target="_blank">Example Website</a>
+    </p>
+    <button class="btn">Hover Me</button>
+    <h2>Input Focus</h2>
+    <input type="text" placeholder="Click here to focus">
+    <h2>Student Marks</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>90</td>
+        </tr>
+       
+        <tr>
+            <td>Bob</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td>92</td>
+        </tr>
+        <tr>
+            <td>David</td>
+            <td>88</td>
+        </tr>
+    </table>
+    <h2>Features</h2>
+    <ul class="features">
+        <li>Responsive Design</li>
+        <li>Fast Performance</li>
+        <li>Easy to Use</li>
+        <li>Cross-browser Support</li>
+    </ul>
+    
+    </body>
+</html>
